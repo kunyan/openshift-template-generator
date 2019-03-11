@@ -1,0 +1,55 @@
+{
+  "name": "openshift-template-generator",
+  "version": "0.0.1",
+  "description": "A OpenShift template generator",
+  "main": "index.js",
+  "repository": "git@github.com:kunyan/openshift-template-generator.git",
+  "author": "Kun Yan <kyan@redhat.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --watch --hot",
+    "build": "webpack --mode=production"
+  },
+  "devDependencies": {
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "@types/classnames": "^2.2.7",
+    "@types/html-webpack-plugin": "^3.2.0",
+    "@types/js-yaml": "^3.12.0",
+    "@types/react": "^16.8.4",
+    "@types/react-copy-to-clipboard": "^4.2.6",
+    "@types/react-dom": "^16.8.2",
+    "@types/react-highlight": "^0.12.1",
+    "@types/webpack": "^4.4.24",
+    "@types/webpack-dev-server": "^3.1.2",
+    "@typescript-eslint/parser": "^1.4.2",
+    "classnames": "^2.2.6",
+    "eslint-plugin-prettier": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.3.1",
+    "js-yaml": "^3.12.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.16.4",
+    "react": "^16.8.2",
+    "react-copy-to-clipboard": "^5.0.1",
+    "react-dom": "^16.8.2",
+    "react-highlight": "^0.12.0",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,json,css,md,html}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
